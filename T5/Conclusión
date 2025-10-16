@@ -1,0 +1,6 @@
+Gracias a la eleaboración de estos tres programas notamos que el algoritmo que tuvo el mayor porcentaje de Accuarycy fue donde calculamos la ecuacón de la recta respecto 2 puntos, 
+y posteriormente calcular la distancia entre un punto que tratamos. En este trabjo tuvimos cierta dificultad al trabajar con el arcchivo que contenia 10000 lineas, lo cual 
+atrubuimos a un mal manejo de los tipos de datos por parte nuestra, ya que, que para lograr trabajar, con ese volumen de datos, se requeria el uso de arreglos dinámicos,
+por que estos no delimitan el tamaño de un arreglo, permitiendonos manejar un array dinámicamente. Esta tarea resulto un poco gratificante, debido a que se logro obtener el 
+100% de presición al emplear el metodo de distancia entre dos puntos, sin embargo, también un poco frustante ya que no logramos superar una eficiencia del 50% en los otros 
+dos metódos. Los que nos demmostó que hay que poner mucha más esfuerzo a la elaoración de este tipo de programas.
