@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <math.h>
+
+// Estructura para representar un punto
+typedef struct {
+    double x, y;
+} Punto;
+
+// FunciÃ³n para obtener la ecuaciÃ³n de la recta (Ax + By + C = 0)
+void obtenerEcuacionRecta(Punto p1, Punto p2, double *A, double *B, double *C) {
+    *A = p2.y - p1.y;
+    *B = p1.x - p2.x;
+    *C = -( (*A) * p1.x + (*B) * p1.y );
+}
+
+// FunciÃ³n para calcular la distancia de un punto a una recta Ax + By + C = 0
+double distanciaPuntoRecta(Punto p, double A, double B, double C) {
+    return fabs(A * p.x + B * p.y + C) / sqrt(A*A + B*B);
+}
+
+int main() {
+    Punto p1, p2, p;
+    double A, B, C;
+
+    printf("=== Calculo de la ecuacion de la recta y distancia de un punto ===\n");
+
+    // Pedir los dos puntos de la recta
+    printf("Ingrese las coordenadas del primer punto (x1 y1): ");
+    scanf("%lf %lf", &p1.x, &p1.y);
+
+    printf("Ingrese las coordenadas del segundo punto (x2 y2): ");
+    scanf("%lf %lf", &p2.x, &p2.y);
+
+    // Calcular la ecuaciÃ³n de la recta
+    obtenerEcuacionRecta(p1, p2, &A, &B, &C);
+    printf("\nEcuacion de la recta: %.2lfx + %.2lfy + %.2lf = 0\n", A, B, C);
+
+    // Pedir un punto para calcular su distancia a la recta
+    printf("\nIngrese las coordenadas del punto (x y): ");
+    scanf("%lf %lf", &p.x, &p.y);
+
+    // Calcular distancia
+    double d = distanciaPuntoRecta(p, A, B, C);
+    printf("\nLa distancia del punto (%.2lf, %.2lf) a la recta es: %.4lf\n", p.x, p.y, d);
+
+    return 0;
+}
